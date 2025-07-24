@@ -1,0 +1,26 @@
+@use './../partials/global.scss' as *;
+
+
+
+.button{
+    width: 18.4rem;
+    height: 6rem;
+    border-radius: 3rem;
+    // background-color: $yellow-light;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: "Signika", sans-serif;
+    display: flex;
+    place-content: center center;
+    place-items: center center;
+    border: none;
+
+    // margin-left: 50rem;
+
+    img{
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: 0.5rem;
+
+    }
+}

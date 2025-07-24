@@ -1,0 +1,9 @@
+@use './../partials/global.scss' as *;
+
+
+.navlink1{
+    text-decoration: none;
+    color: $dark1-color;
+    font-weight: 500;
+    text-transform: uppercase;
+}

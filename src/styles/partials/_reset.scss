@@ -14,9 +14,11 @@ html{
 
 
 body{
-    font-family: 'signika', sans-serif;
+    // font-family: 'signika', ;
+    font-family: 'Signika', 'Roboto', sans-serif ;
     font-weight: 400;
     font-size: 2.3rem;
     line-height: 1.7;
     color: $body-color;
+    background-color: $background-body-color;
 }

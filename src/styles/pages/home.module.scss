@@ -1,0 +1,337 @@
+@use "./../partials/global" as *;
+
+.section {
+    display: grid;
+    justify-content: center;
+
+    .header {
+        background-color: aqua;
+        background-color: $white-color;
+        display: grid;
+        grid-auto-flow: column;
+        width: 188rem;
+        height: 10rem;
+        font-weight: 600;
+        font-size: 1.4rem;
+
+        @include myFont(1.4rem, 600);
+        border-radius: 3rem;
+        align-items: center;
+        margin: 1.5rem 0 1.5rem 0;
+        grid-template-columns: repeat(10, 1fr);
+
+        &_img {
+            grid-column: 1/2;
+            margin-left: 2rem;
+        }
+
+        &_aside {
+            grid-column: 5/8;
+            display: grid;
+            grid-auto-flow: column;
+
+            &_nav {
+                // background-color: pink;
+                display: grid;
+                grid-auto-flow: column;
+                align-items: center;
+
+                &_link {
+                    font-weight: 600;
+                }
+
+                &_div {
+                    width: 0.7rem;
+                    height: 0.7rem;
+                    background-color: $yellow-light;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        &_aside2 {
+            grid-column: 8/11;
+            display: flex;
+            // align-items: center;
+            justify-content: space-around;
+
+            &_div {
+                display: flex;
+                // justify-content: space-around;
+                align-self: center;
+                // width: 21%;
+
+                &_img {
+                    // object-fit: contain;
+                    width: auto;
+                    height: 3.5rem;
+                    margin-right: 1.5rem;
+                    align-self: center;
+                }
+            }
+
+            &_div {
+            }
+            &_button {
+                border: none;
+                border-radius: 10rem;
+            }
+            &_button1 {
+                background-color: $yellow-light;
+            }
+        }
+    }
+
+    .article {
+        background-color: $green-color;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        width: 188rem;
+        height: auto;
+        border-radius: 3rem;
+        margin-bottom: 3rem;
+
+        &_img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &_aside_main {
+            display: grid;
+            // grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-auto-flow: row;
+            width: 100%;
+            height: 100%;
+            color: $white-color;
+            // justify-items: center;
+            justify-content: center;
+            // align-content: center;
+            // gap: -5rem;
+
+            &_div {
+                grid-column: 2/7;
+                grid-row: 1/3;
+                // align-self: center;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+
+                &_div {
+                    grid-column: 2/3;
+                    // grid-row: 2/3;
+                    align-self: center;
+                    margin-top: 10rem;
+                    font-size: 1.5rem;
+                    margin-left: -4rem;
+                    bottom: $green-color;
+                    border: 1px solid $white-color;
+                    border-radius: 3rem;
+                    text-align: center;
+                    width: 17rem;
+                }
+
+                &_img {
+                    grid-column: 4/5;
+                    // grid-row: 2/5;
+                    align-self: center;
+                }
+            }
+
+            &_p {
+                grid-row: 2/4;
+                grid-column: 2/7;
+                place-self: center;
+                font-family: "signika", sans-serif;
+                font-weight: 400;
+                font-size: 8rem;
+                margin-top: -3rem;
+
+                // color: $white-color;
+            }
+            &_p2 {
+                grid-row: 3/4;
+                grid-column: 2/7;
+                place-self: center;
+                font-family: "signika", sans-serif;
+                font-weight: 700;
+                font-size: 9.2rem;
+                margin-left: -3rem;
+                margin-top: 1rem;
+                // color: $white-color;
+            }
+
+            &_button {
+                grid-column: 3/4;
+                // grid-row: 4/5;
+                justify-self: center;
+                margin-left: -6rem;
+            }
+        }
+
+        &_img {
+            border-radius: 3rem;
+        }
+    }
+}
+
+.main {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    //  Info reusable component
+    .aside {
+        display: flex;
+        gap: 1rem;
+
+        &_div {
+            width: 9rem;
+            height: 9rem;
+            background-color: $yellow-light;
+            border-radius: 50%;
+            text-align: center;
+            display: grid;
+        }
+
+        &_img {
+            place-self: center;
+        }
+
+        &_div2 {
+            display: grid;
+            place-content: center;
+
+            &_p {
+                text-transform: capitalize;
+                font-family: "Signika", sans-serif;
+                font-weight: 500;
+                font-size: 2.4rem;
+            }
+
+            &_p1 {
+                margin-top: -1rem;
+                font-family: "Roboto", sans-serif;
+                font-size: 1.6rem;
+
+                // font-weight: 400;
+            }
+        }
+    }
+}
+
+// Third Section
+.main2 {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+
+    &_aside {
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        &_div {
+            display: flex;
+            grid-column: 3/6;
+            justify-self: center;
+            place-items: center;
+            background-color: $white-color;
+            // padding: 1rem 2rem 1rem 2rem;
+            border-radius: 3rem;
+            height: 3rem;
+            width: 17.2rem;
+            padding-left: 2rem;
+            margin-bottom: -3rem;
+            @include myFont(1.4rem, 500);
+            &_img {
+                object-fit: contain;
+                width: auto;
+                height: 1.8rem;
+                padding-right: 1rem;
+                padding-bottom: .5rem;
+            }
+        }
+    }
+    &_aside2 {
+        grid-row: 2/3;
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(15, 1fr);
+        margin-bottom: 2.5rem;
+        margin-top: 2rem;
+        margin-right: 3rem;
+        &_h1 {
+            grid-column: 2/8;
+            justify-self: center;
+            @include myFont(5.5rem, 500);
+        }
+        &_div {
+            grid-column: 12/14;
+            justify-self: end;
+            align-self: center;
+
+            &_button{
+                margin-right: 2rem;
+                border: none;
+            }
+            &_button2{
+                border: none;
+            }
+        }
+    }
+}
+
+.main2_aside3 {
+    grid-row: 3/4;
+    display: grid;
+    grid-auto-flow: column;
+    place-content: center;
+    gap: 3rem;
+    // position: ;
+}
+// Card component
+.card_section {
+    display: grid;
+    position: relative;
+
+    &_img {
+        // display: block;
+        place-items: center;
+    }
+    &_div {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        grid-area: 1/1;
+        place-items: center;
+
+        &_img2 {
+            display: block;
+        }
+        &_img3 {
+            display: block;
+        }
+        &_p {
+            // position: absolute;
+            // place-self: center;
+            // margin-top: 6rem;
+        }
+        &_p2 {
+            // position: absolute;
+            // place-self: center;
+            // margin-top: 10rem;
+        }
+    }
+    &_button {
+        border: none;
+        border-radius: 5rem;
+        position: absolute;
+        left: 85%;
+        top: 96%;
+    }
+}

@@ -1,12 +1,22 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Footer from "./ui/Footer";
+import AppLayout from "./ui/AppLayout";
+import Home from "./pages/Home";
 
-import Footer from './ui/Footer'
+const router = createBrowserRouter([
+    {
+        element: <AppLayout />,
+        children: [
+            {
+                path: "/",
+                element: <Home />,
+            },
+        ],
+    },
+]);
 
 function App() {
-
-  return (
-   <Footer/>
-
-  )
+    return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

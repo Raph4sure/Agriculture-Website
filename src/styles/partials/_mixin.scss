@@ -1,0 +1,10 @@
+@use "./variables" as *;
+
+@mixin myFont($size, $weight, $family: null) {
+    font-size: $size;
+    font-weight: $weight;
+
+    @if $family {
+        font-family: $family;
+    }
+}

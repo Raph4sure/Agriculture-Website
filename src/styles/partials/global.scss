@@ -1,2 +1,3 @@
-@use './variables' as *;
-@use './reset.scss' as *;
+@forward './variables' ;
+@forward './reset.scss' ;
+@forward './mixin.scss' ;
